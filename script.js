@@ -69,15 +69,13 @@ faq_head.forEach((item, index) => {
 const handlechange = () => {
   let email = document.querySelector(".email");
   const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  // if (!regex.test(document.getElementById("my-input").value)) {
-  //   email.classList.toggle("error");
-  // }
   regex.test(document.getElementById("my-input").value)
     ? email.classList.remove("error")
     : email.classList.add("error");
 };
 
 const nav_header = document.querySelector(".nav_header");
+const ancre = document.querySelectorAll(".nav_header ul li a");
 
 const handle_show_nav = () => {
   nav_header.style.display = "block";
@@ -86,3 +84,7 @@ const handle_show_nav = () => {
 const close_button = () => {
   nav_header.style.display = "none";
 };
+
+ancre.forEach((item, index) => {
+  item.addEventListener("click", close_button);
+});
