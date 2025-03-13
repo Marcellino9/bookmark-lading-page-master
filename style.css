@@ -207,6 +207,12 @@ main {
 .tabcontent.slide-right {
   animation: slideRight 0.5s forwards;
 }
+.switch_tab,
+.download_section,
+.hero_section,
+.frequently_question {
+  height: 100vh;
+}
 @keyframes slideRight {
   from {
     transform: translateX(100%);
@@ -298,7 +304,6 @@ main {
 }
 .transition2 {
   clear: both;
-  margin-top: 20%;
 }
 .browsers {
   margin-top: 8%;
@@ -474,6 +479,10 @@ main {
   padding: 0.1rem;
   font-style: italic;
 }
+.faq_button {
+  display: grid;
+  place-items: center;
+}
 
 footer,
 .lef_footer {
@@ -508,6 +517,16 @@ footer {
 @media only screen and (max-width: 1030px) {
   html {
     font-size: 16px;
+  }
+  .switch_tab,
+  .download_section,
+  .hero_section,
+  .frequently_question {
+    height: auto;
+  }
+  .download_section,
+  .frequently_question {
+    margin-top: 20%;
   }
   .hero_section {
     flex-direction: column;
@@ -615,11 +634,11 @@ footer {
     margin-inline: auto;
   }
   .nav_header ul li {
-    color: white;
     padding: 2rem;
     text-align: center;
   }
   .nav_header ul li a {
+    color: white;
     font-size: 1rem;
   }
   .nav_header ul li:nth-child(odd) {
@@ -756,5 +775,8 @@ footer {
   }
   .side_footer {
     margin-top: 5%;
+  }
+  .hero_section .left_side {
+    margin-top: 10%;
   }
 }
